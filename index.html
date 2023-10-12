@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Depot</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./src/css/bootstrap.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="top-header">
+            <div class="custom-nav">
+              <div class="left-nav">
+                <ul>
+                  <li>
+                    <div class="home">
+                      <a class="home-link" href="">HOME</a>
+                      <div class="home-dropdown">
+                        <a class="mainHome" href=""
+                          ><i class="fa-solid fa-arrow-right me-2"></i>Main
+                          Home</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                          >Minimal Home</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                          >Masonry Home</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                          >Classic Home</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                          >Passepartout Home</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i>Left
+                          Menu Home</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                          >Boxed Home</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i>Full
+                          Screen Home</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                          >Product Showcase</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                          >Slider Showcase</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                          >Simple Home</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                          >Split Showcase</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                          >Landing Page</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="shop">
+                      <a class="shop-link" href="">SHOP</a>
+                      <div class="shop-dropdown">
+                        <div class="shop-types">
+                          <a href=""><h3>Shop types</h3></a>
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Left Sidebar</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >With Filter</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Masonry-Grid</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Masonry-Wide</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Shop Carousel</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Shop Boxed</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Single Category</a
+                          >
+                        </div>
+                        <div class="product-types">
+                          <a href=""><h3>Product types</h3></a>
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Standard Product</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Grouped Product</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Variable Product</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Downloadable Product</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Virtual Product</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >External Product</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >New! Product</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i>On
+                            Sale Product</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Out of stock Product</a
+                          >
+                        </div>
+                        <div class="featured">
+                          <a href=""><h3>Featured</h3></a>
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >User Dashboard</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Order Tracking</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i>My
+                            Account</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Cart</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Checkout</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Addresses</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Payment Methods</a
+                          >
+                        </div>
+                        <div class="layouts">
+                          <a href=""><h3>layouts</h3></a>
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Two Columns Grid</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Three Columns Grid</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Four Columns Grid</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Four Columns Wide</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Five Columns Wide</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Six Columns Wide</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="page">
+                      <a class="page-link-custom" href="">PAGES</a>
+                      <div class="page-dropdown">
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                          >About Us</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i>What
+                          We Do</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i>Our
+                          Team</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i>Meet
+                          The Crew</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i>Team
+                          Member</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i>Our
+                          Services</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                          >Pricing Plans</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                          >Payment</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                          >Testimonials</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i>Gift
+                          Cards</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                          >Terms & Conditions</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                          >Contact Us</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                          >Leave Us A Note</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                          >FAQ</a
+                        >
+                        <a href=""
+                          ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                          >Coming Soon</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="element">
+                      <a class="element-link" href="">ELEMENTS</a>
+                      <div class="element-dropdown">
+                        <div class="shop-shortcodes">
+                          <a href=""><h3>Shop Shortcodes</h3></a>
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Product List</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Product List - Carousel</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Product List - Simple</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i>On
+                            Sale Products</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Top Rated Products</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Best Selling Products</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Product by Attribute</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Single Category List</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Order Tracking</a
+                          >
+                        </div>
+                        <div class="classic">
+                          <a href=""><h3>classic</h3></a>
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Accordions & Toggles
+                          </a>
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Tabs</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Buttons</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Call To Action</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Separators</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Contact Form</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Icon With Text</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i>On
+                            Message Boxes</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Typography</a
+                          >
+                        </div>
+                        <div class="infographic">
+                          <a href=""><h3>Infographic</h3></a>
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Pricing Tables</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Progress Bar</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i>My
+                            Process</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Google Map</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Counters</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Countdown</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Pie Chart</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Video Button</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Image Gallery</a
+                          >
+                        </div>
+                        <div class="presentation">
+                          <a href=""><h3>presentation</h3></a>
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Depot Banner</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Portfolio List</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Blog List</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Item Showcase</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Clients</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Testimonials Slider</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Team List</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Team Slider</a
+                          >
+                          <a href=""
+                            ><i class="fa-solid fa-arrow-right me-2 hide"></i
+                            >Team Member</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="logo">
+                <div class="img-div">
+                  <a href="">
+                    <img
+                      class="img-fluid"
+                      src="./src/img/logo2.png"
+                      alt="logo"
+                    />
+                  </a>
+                </div>
+              </div>
+              <div class="right-nav">
+                <div class="cart">
+                  <a class="cart-link" href=""
+                    >Cart <span class="cart-price">($0)</span></a
+                  >
+                </div>
+                <div class="favorite">
+                  <a class="favorite-link" href="">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="favorite-count">(0)</span>
+                  </a>
+                </div>
+                <div class="login">
+                  <a class="login-link" href=""
+                    ><i class="fa-regular fa-user me-2"></i>login</a
+                  >
+                </div>
+                <div class="search">
+                  <a class="search-link" href=""
+                    ><i class="fa-solid fa-magnifying-glass"></i
+                  ></a>
+                </div>
+                <div class="welcome">
+                  <a class="welcome-link" href=""
+                    ><i class="fa-solid fa-bars"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="form-container">
+        <i class="fa-solid fa-xmark form-close"></i>
+        <div class="login-form">
+          <form>
+            <div class="tab-menu-container">
+              <div class="tabs">
+                <div class="tab-heading active" data-index="1">LOGIN</div>
+                <div class="tab-heading" data-index="2">REGISTER</div>
+              </div>
+              <div class="content">
+                <div class="content-head show" data-index="1">
+                  <input class="inp-name" type="text" placeholder="User Name" />
+                  <input
+                    class="inp-pass"
+                    type="password"
+                    placeholder="Password"
+                  />
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Remember me
+                    </label>
+                  </div>
+                  <a class="lostPassword" href="#">Lost Your Password?</a>
+                  <div>
+                    <a href="#" class="login-btn">LOGIN</a>
+                  </div>
+                </div>
+                <div class="content-head" data-index="2">
+                  <input class="inp-name" type="text" placeholder="User Name" />
+                  <input class="inp-name" type="email" placeholder="Email" />
+                  <input
+                    class="inp-name"
+                    type="password"
+                    placeholder="Password"
+                  />
+                  <input
+                    class="inp-pass"
+                    type="password"
+                    placeholder="Repeat Password"
+                  />
+                  <span class="policy-text"
+                    >Your personal data will be used to <br />
+                    support your experience throughout <br />
+                    this website, to manage access to <br />
+                    your account, and for other purposes <br />
+                    described in our
+                    <a class="policy" href="#">privacy policy</a></span
+                  >
+                  <div>
+                    <a href="#" class="register-btn">REGISTER</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="./src/js/bootstrap.js"></script>
+  <script src="./src/js/app.js"></script>
+</html>

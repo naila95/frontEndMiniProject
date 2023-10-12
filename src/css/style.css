@@ -1,0 +1,432 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: Catamaran;
+  src: url(/src/fonts/catamaran/Catamaran-Regular.ttf);
+}
+
+body {
+  font-family: Catamaran;
+}
+
+.custom-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.left-nav ul li {
+  padding: 0 22px;
+}
+
+.shop-link,
+.page-link-custom,
+.element-link {
+  color: #080808;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.shop-link:hover,
+.page-link-custom:hover,
+.element-link:hover {
+  color: #929292;
+}
+
+.left-nav ul li .home-link {
+  color: #929292;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.home,
+.shop,
+.page,
+.element {
+  height: 110px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: all 1s;
+}
+
+.home:hover .home-dropdown {
+  display: block;
+  /* height: 33rem; */
+}
+
+/* .home:hover::after {
+  height: 3rem;
+}
+
+.home-dropdown::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -30px;
+  background-color: #111;
+  height: 0;
+} */
+
+.home-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -30px;
+  width: 12.3rem;
+  vertical-align: middle;
+  background-color: #111;
+  padding: 30px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.03);
+  /* transition: all 1s ease-in;
+  height: 0;
+  overflow: hidden; */
+}
+
+.home-dropdown a {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #929292;
+  font-weight: 100;
+  transition: 0.5s;
+}
+
+.hide {
+  display: none;
+  transition: 0.5s;
+}
+
+.home-dropdown a:hover .hide {
+  display: inline-block;
+  color: #fff;
+}
+
+.home-dropdown a:hover {
+  color: #fff;
+}
+
+.mainHome {
+  color: #fff !important;
+}
+
+.shop-dropdown {
+  display: none;
+  background-color: #111;
+  padding: 40px 140px 40px 40px;
+  justify-content: space-between;
+  align-items: baseline;
+  position: absolute;
+  top: 100%;
+  left: -290%;
+  width: 80rem;
+}
+
+.shop:hover .shop-dropdown {
+  display: flex;
+}
+
+.shop-dropdown h3,
+.element-dropdown h3 {
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.1em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.shop-types a,
+.product-types a,
+.featured a,
+.layouts a,
+.shop-shortcodes a,
+.classic a,
+.infographic a,
+.presentation a {
+  color: #a5a5a5;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* .shop-types,
+.product-types,
+.featured,
+.layouts {
+  margin-right: 50px;
+} */
+
+.shop-types a:hover .hide,
+.product-types a:hover .hide,
+.featured a:hover .hide,
+.layouts a:hover .hide {
+  display: inline-block;
+  color: #fff;
+}
+
+.shop-types a:hover,
+.product-types a:hover,
+.featured a:hover,
+.layouts a:hover {
+  color: #fff;
+}
+
+.page-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -30px;
+  width: 12.3rem;
+  vertical-align: middle;
+  background-color: #111;
+  padding: 30px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.03);
+}
+
+.page-dropdown a {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #929292;
+  font-weight: 100;
+  transition: 0.5s;
+}
+
+.page-dropdown a:hover .hide {
+  display: inline-block;
+  color: #fff;
+}
+
+.page-dropdown a:hover {
+  color: #fff;
+}
+
+.page:hover .page-dropdown {
+  display: block;
+}
+
+.element:hover .element-dropdown {
+  display: flex;
+}
+
+.element-dropdown {
+  display: none;
+  background-color: #111;
+  padding: 40px 140px 40px 40px;
+  justify-content: space-between;
+  align-items: baseline;
+  position: absolute;
+  top: 100%;
+  left: -386%;
+  width: 80rem;
+}
+
+.element-dropdown a:hover .hide {
+  display: inline-block;
+  color: #fff;
+}
+
+.element-dropdown a:hover {
+  color: #fff;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.img-div {
+  width: 50%;
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart,
+.favorite,
+.login,
+.search,
+.welcome {
+  padding: 0 13px;
+}
+
+.cart .cart-link,
+.favorite a,
+.login a,
+.search a,
+.welcome a {
+  color: #080808;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.cart-link .cart-price,
+.favorite-count {
+  color: #929292;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.right-nav i {
+  font-size: 14px;
+}
+
+.cart:hover .cart-link,
+.favorite:hover .favorite-link,
+.login:hover .login-link,
+.search:hover .search-link,
+.welcome:hover .welcome-link {
+  color: #929292;
+}
+
+/* FORM */
+
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 111;
+  background-color: #fff;
+  padding: 10px 40px 30px 40px;
+  border: 1px solid black;
+}
+
+.form-close {
+  position: absolute;
+  top: -18px;
+  right: -15px;
+  font-size: 22px;
+  color: #080808;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.inp-name {
+  padding: 10px 20px;
+  border: solid 1px #d4d2d2;
+  margin-bottom: 10px;
+  display: block;
+}
+
+::placeholder {
+  color: #929292;
+  font-size: 13px;
+}
+
+.inp-pass {
+  padding: 10px 20px;
+  border: solid 1px #d4d2d2;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.form-check-label {
+  color: #929292 !important;
+  font-size: 13px;
+}
+
+.lostPassword {
+  color: #929292;
+  font-size: 13px;
+}
+
+.lostPassword:hover {
+  color: #080808;
+}
+
+.login-btn {
+  display: block;
+  margin-top: 30px;
+  margin-top: 15px;
+  background-color: #080808;
+  color: #fff;
+  font-size: 12px;
+  padding: 20px 82px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.login-btn:hover {
+  color: #fff;
+}
+
+.show {
+  display: block !important;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tab-heading {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.tab-heading:hover {
+  color: #929292;
+}
+
+.content-head {
+  display: none;
+}
+
+.policy-text {
+  font-size: 13px;
+  color: #929292;
+}
+
+.policy {
+  color: #080808;
+  font-size: 13px;
+}
+
+.register-btn {
+  display: block;
+  margin-top: 30px;
+  margin-top: 15px;
+  background-color: #080808;
+  color: #fff;
+  font-size: 12px;
+  padding: 20px 70px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.register-btn:hover {
+  color: #fff;
+}
