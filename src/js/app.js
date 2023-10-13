@@ -5,6 +5,13 @@ window.addEventListener("DOMContentLoaded", function () {
   let formContainer = document.querySelector(".form-container");
   let formCloseBtn = document.querySelector(".form-close");
   let body = document.querySelector("body");
+  let phoneDropIcon = document.querySelector(".phone-drop-icon");
+  let phoneDropdown = document.querySelector(".category-dropdown");
+  let searchIcon = document.querySelector(".search-icon");
+  let searchInp = document.querySelector(".search-inp");
+  let welcomePage = document.querySelector("#welcome-page");
+  let welcomeClose = document.querySelector(".welcome-close-icon");
+  let welcomeOpen = document.querySelector(".welcome-open-icon");
 
   // FORM
 
@@ -36,6 +43,30 @@ window.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // SEARCH
+
+  searchIcon.addEventListener("click", function (e) {
+    e.preventDefault();
+    searchInp.classList.toggle("show");
+  });
+
+  // PHONE
+
+  phoneDropIcon.addEventListener("click", function () {
+    phoneDropdown.classList.toggle("visible");
+  });
+
+  // WELCOME PAGE
+
+  welcomeOpen.addEventListener("click", function (e) {
+    e.preventDefault();
+    welcomePage.classList.add("show");
+  });
+
+  welcomeClose.addEventListener("click", function () {
+    welcomePage.classList.remove("show");
+  });
+
   // FETCH
 
   fetch("db.json")
@@ -44,7 +75,7 @@ window.addEventListener("DOMContentLoaded", function () {
       let html = "";
       data.products.forEach((product) => {
         html += `
-        <div class="col-md-3">
+        <div class="col-md-6 col-lg-3 col-sm-12">
             <div class="item">
               <span></span>
               <img class="img-fluid" src="${product.image}" />

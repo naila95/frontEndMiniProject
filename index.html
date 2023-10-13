@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./src/css/style.css" />
   </head>
   <body>
-    <header>
+    <header id="comp-header">
       <div class="container">
         <div class="row">
           <div class="top-header">
@@ -482,15 +482,16 @@
                 </div>
                 <div class="search">
                   <a class="search-link" href=""
-                    ><i class="fa-solid fa-magnifying-glass"></i
+                    ><i class="fa-solid fa-magnifying-glass search-icon"></i
                   ></a>
-                  <!-- <div class="search-inp">
-                    <input type="text">
-                  </div> -->
+                  <div class="search-inp">
+                    <input type="text" placeholder="Enter keyword..." />
+                    <i class="fa-solid fa-arrow-right-long arrow-icon"></i>
+                  </div>
                 </div>
                 <div class="welcome">
                   <a class="welcome-link" href=""
-                    ><i class="fa-solid fa-bars"></i
+                    ><i class="fa-solid fa-bars welcome-open-icon"></i
                   ></a>
                 </div>
               </div>
@@ -499,6 +500,99 @@
         </div>
       </div>
     </header>
+    <header id="phone-header">
+      <div class="container">
+        <div class="row">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <a href="">
+                <h2>DEPOT</h2>
+              </a>
+            </div>
+            <div class="menu">
+              <span>MENU</span>
+              <i class="fa-solid fa-bars"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section id="welcome-page">
+      <i class="fa-solid fa-xmark welcome-close-icon"></i>
+      <div class="welcome-content">
+        <h6>welcome</h6>
+        <p>
+          Advertising is the way great brands get to be <br />
+          great brands.
+        </p>
+      </div>
+      <div class="welcome-imgs">
+        <div class="welcome-img">
+          <img
+            class="img-fluid"
+            src="./src/img/121665687_358112645401863_3510768153228424655_n.jpg"
+            alt=""
+          />
+        </div>
+        <div class="welcome-img">
+          <img
+            class="img-fluid"
+            src="./src/img/121700270_225093348948361_5082705528782722824_n.jpg"
+            alt=""
+          />
+        </div>
+        <div class="welcome-img">
+          <img
+            class="img-fluid"
+            src="./src/img/121706350_341238710274276_2107885337301681786_n.jpg"
+            alt=""
+          />
+        </div>
+        <div class="welcome-img">
+          <img
+            class="img-fluid"
+            src="./src/img/121723529_3793969053955516_8810353083681158264_n.jpg"
+            alt=""
+          />
+        </div>
+        <div class="welcome-img">
+          <img
+            class="img-fluid"
+            src="./src/img/121973628_200177911508014_2941590146547160742_n.jpg"
+            alt=""
+          />
+        </div>
+        <div class="welcome-img">
+          <img
+            class="img-fluid"
+            src="./src/img/122016608_806650313433880_1600521106296355963_n.jpg"
+            alt=""
+          />
+        </div>
+        <div class="welcome-img">
+          <img
+            class="img-fluid"
+            src="./src/img/122051697_411026813238434_1355949659294403733_n.jpg"
+            alt=""
+          />
+        </div>
+        <div class="welcome-img">
+          <img
+            class="img-fluid"
+            src="./src/img/122148512_2806300579659337_8890330674367352214_n.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="welcome-footer">
+        <h6>WE ARE AWESOME FOLOW US</h6>
+        <div class="welcome-footer-icons">
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </section>
     <section id="form-section">
       <div class="form-container">
         <i class="fa-solid fa-xmark form-close"></i>
@@ -588,7 +682,7 @@
                   <div class="col-md-6">
                     <div>
                       <img
-                        class="slider-img"
+                        class="slider-img img-fluid"
                         src="./src/img/h1-slide1-img.png"
                         alt=""
                       />
@@ -611,7 +705,7 @@
                   <div class="col-md-6">
                     <div>
                       <img
-                        class="slider-img"
+                        class="slider-img img-fluid"
                         src="./src/img/h1-slide2-img2.png"
                         alt=""
                       />
@@ -634,7 +728,7 @@
                   <div class="col-md-6">
                     <div>
                       <img
-                        class="slider-img"
+                        class="slider-img img-fluid"
                         src="./src/img/h1-slide3-img.jpg"
                         alt=""
                       />
@@ -673,6 +767,18 @@
     </section>
     <section id="items">
       <div class="container">
+        <div class="items-phone">
+          <a class="phone-categories" href="">Categories</a>
+          <i class="fa-solid fa-sort-down phone-drop-icon"></i>
+          <div class="category-dropdown">
+            <a class="allCategory" href="">All</a>
+            <a href="">Home Decor</a>
+            <a href="">lighting</a>
+            <a href="">decoration</a>
+            <a href="">vases</a>
+            <a href="">basics</a>
+          </div>
+        </div>
         <div class="items-category">
           <a class="allCategory" href="">All</a>
           <a href="">Home Decor</a>
@@ -771,7 +877,7 @@
       </div>
       <div class="rights">
         <div class="container">
-          <div class="d-flex justify-content-between align-items-center">
+          <div class="rights-main">
             <div class="reserved">
               <p>© 2021 Qode Interactive, All Rights Reserved</p>
             </div>
