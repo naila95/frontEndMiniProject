@@ -81,7 +81,6 @@ body {
 
 .home:hover .home-dropdown {
   display: block;
-  /* height: 33rem; */
 }
 
 /* .home:hover::after {
@@ -621,6 +620,9 @@ body {
 
 .allCategory {
   margin-left: 10px;
+}
+
+.items-category a.active {
   color: #080808 !important;
 }
 

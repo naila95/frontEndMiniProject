@@ -12,6 +12,7 @@ window.addEventListener("DOMContentLoaded", function () {
   let welcomePage = document.querySelector("#welcome-page");
   let welcomeClose = document.querySelector(".welcome-close-icon");
   let welcomeOpen = document.querySelector(".welcome-open-icon");
+  let itemList = [];
 
   // FORM
 
@@ -67,28 +68,53 @@ window.addEventListener("DOMContentLoaded", function () {
     welcomePage.classList.remove("show");
   });
 
+  // FILTER
+
+  // function filterCategories() {
+  //   let category = document.querySelector(".items-category");
+  //   let filterHtml = "";
+  //   let categoryTypes = ["All"];
+  // }
+
   // FETCH
 
-  fetch("db.json")
-    .then((res) => res.json())
-    .then((data) => {
-      let html = "";
-      data.products.forEach((product) => {
-        html += `
-        <div class="col-md-6 col-lg-3 col-sm-12">
-            <div class="item">
-              <span></span>
-              <img class="img-fluid" src="${product.image}" />
-              <div class="item-content">
-                <a class="item-name" href="">${product.name}</a>
-                <p class="item-price">$${product.price}</p>
-                <a class="addToCart" href="#">Add to cart</a>
-              </div>
-            </div>
-          </div>
-        `;
-      });
+  const getItems = () => {
+    fetch("db.json")
+      .then((res) => res.json())
+      .then((item) => (itemList = item));
+  };
 
-      document.querySelector(".items-main").innerHTML = html;
-    });
+  getItems();
+
+  const elementCreating = () => {
+    console.log("hii");
+  };
+
+  let name= "naile";
+
+  
+
+  // const createElement = () => {
+  //   let html = "";
+  //   itemList.forEach((product) => {
+  //     html += `
+  //     <div class="col-md-6 col-lg-3 col-sm-12">
+  //         <div class="item">
+  //           <span></span>
+  //           <img class="img-fluid" src="${product.image}" />
+  //           <div class="item-content">
+  //             <a class="item-name" href="">${product.name}</a>
+  //             <p class="item-price">$${product.price}</p>
+  //             <a class="addToCart" href="#">Add to cart</a>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     `;
+  //   });
+  //   document.querySelector(".items-main").innerHTML = html;
+  // };
+
+  // setTimeout(() => {
+  //   createHtmlEl();
+  // }, 100);
 });

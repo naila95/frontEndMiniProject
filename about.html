@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Depot</title>
+    <title>About</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -13,6 +13,7 @@
     />
     <link rel="stylesheet" href="./src/css/bootstrap.css" />
     <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="stylesheet" href="./src/css/about.css" />
   </head>
   <body>
     <header id="comp-header">
@@ -20,6 +21,17 @@
         <div class="row">
           <div class="top-header">
             <div class="custom-nav">
+              <div class="logo">
+                <div class="img-div">
+                  <a href="">
+                    <img
+                      class="img-fluid"
+                      src="./src/img/logo2.png"
+                      alt="logo"
+                    />
+                  </a>
+                </div>
+              </div>
               <div class="left-nav">
                 <ul>
                   <li>
@@ -220,7 +232,7 @@
                     <div class="page">
                       <a class="page-link-custom" href="">PAGES</a>
                       <div class="page-dropdown">
-                        <a href="./about.html"
+                        <a href=""
                           ><i class="fa-solid fa-arrow-right me-2 hide"></i
                           >About Us</a
                         >
@@ -448,17 +460,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="logo">
-                <div class="img-div">
-                  <a href="">
-                    <img
-                      class="img-fluid"
-                      src="./src/img/logo2.png"
-                      alt="logo"
-                    />
-                  </a>
-                </div>
-              </div>
+
               <div class="right-nav">
                 <div class="cart">
                   <a class="cart-link" href="cart.html"
@@ -654,240 +656,75 @@
         </div>
       </div>
     </section>
-    <section id="slider">
+    <section id="about-background">
+      <div class="cart-text">
+        <h6>ABOUT US</h6>
+      </div>
+    </section>
+    <section id="about-first">
       <div class="container">
         <div class="row">
-          <div
-            id="carouselExampleFade"
-            class="carousel slide carousel-fade"
-            data-bs-ride="carousel"
-          >
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="d-flex justify-content-between">
-                  <div class="col-md-6">
-                    <div class="first-slide">
-                      <h3>think different.</h3>
-                      <p>
-                        Depot is a unique & captivating theme designed
-                        <br />
-                        specifically for all types of shops and online stores.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div>
-                      <img
-                        class="slider-img img-fluid"
-                        src="./src/img/h1-slide1-img.png"
-                        alt=""
-                      />
-                    </div>
-                  </div>
+          <div class="col-lg-6">
+            <img class="img-fluid" src="./src/img/about-img-2.jpg" alt="" />
+          </div>
+          <div class="col-lg-6">
+            <div class="tab-menu-container">
+              <div class="tabs-about">
+                <div class="active about-tabs-heading" data-index="1">
+                  ABOUT US
                 </div>
+                <div class="about-tabs-heading" data-index="2">SERVICES</div>
+                <div class="about-tabs-heading" data-index="3">HISTORY</div>
               </div>
-              <div class="carousel-item">
-                <div class="d-flex justify-content-between">
-                  <div class="col-md-6">
-                    <div class="first-slide">
-                      <h3>contemporary design.</h3>
-                      <p>
-                        A large set of beautiful & flexible homepage layouts
-                        <br />
-                        lets you create your website quickly & easily.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div>
-                      <img
-                        class="slider-img img-fluid"
-                        src="./src/img/h1-slide2-img2.png"
-                        alt=""
-                      />
-                    </div>
-                  </div>
+              <div class="content">
+                <div class="show" data-index="1">
+                  <p>
+                    Vestibulum ultricies aliquam convallis. Maecenas ut tellus
+                    mi. Proin tincidunt, lectus eu volutpat mattis, ante metus
+                    lacinia tellus, vitae condimentum nulla enim bibendum nibh.
+                    Praesent turpis risus, interdum nec venenatis id, pretium
+                    sit amet purus. Interdum et malesuada fames ac ante ipsum
+                    primis in faucibus. Aliquam eu lorem nibh. Mauris ex dolor,
+                    rutrum in odio vel, suscipit ultrices nunc. Cras ipsum
+                    dolor, eleifend et nisl vel, tempor molestie nibh.
+                  </p>
                 </div>
-              </div>
-              <div class="carousel-item">
-                <div class="d-flex justify-content-between">
-                  <div class="col-md-6">
-                    <div class="first-slide">
-                      <h3>Premium comfort.</h3>
-                      <p>
-                        One-click import feature lets you import the complete
-                        <br />
-                        Depot demo content with a single mouse click.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div>
-                      <img
-                        class="slider-img img-fluid"
-                        src="./src/img/h1-slide3-img.jpg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
+                <div data-index="2">
+                  <p>
+                    Cras ipsum dolor, eleifend et nisl vel, tempor molestie
+                    nibh. In hac habitasse platea dictumst. Proin nec blandit
+                    ligula. Donec volutpat leo turpis, vel accumsan nunc
+                    convallis id. Vestibulum ultricies aliquam convallis.
+                    Maecenas ut tellus mi. Proin tincidunt, lectus eu volutpat
+                    mattis, ante metus lacinia tellus, vitae condimentum nulla
+                    enim bibendum nibh. Praesent turpis risus, interdum nec
+                    venenatis id, pretium sit amet purus. Interdum et malesuada
+                    fames ac ante ipsum.
+                  </p>
+                </div>
+                <div data-index="3">
+                  <p>
+                    Donec volutpat leo turpis, vel accumsan nunc convallis id.
+                    Vestibulum ultricies aliquam convallis. Maecenas ut tellus
+                    mi. Proin tincidunt, lectus eu volutpat mattis, ante metus
+                    lacinia tellus, vitae condimentum nulla enim bibendum nibh.
+                    Cras ipsum dolor, eleifend et nisl vel, tempor molestie
+                    nibh. In hac habitasse platea dictumst. Praesent turpis
+                    risus, interdum nec venenatis id, pretium sit amet purus.
+                    Interdum et malesuada fames ac ante ipsum primis. Proin nec.
+                  </p>
                 </div>
               </div>
             </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleFade"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleFade"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+            <div class="about-learn">
+              <a href=""
+                >learn more<i class="fa-solid fa-arrow-right-long"></i
+              ></a>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="items">
-      <div class="container">
-        <div class="items-phone">
-          <a class="phone-categories" href="">Categories</a>
-          <i class="fa-solid fa-sort-down phone-drop-icon"></i>
-          <div class="category-dropdown">
-            <a class="active" href="">All</a>
-            <a href="">Home Decor</a>
-            <a href="">lighting</a>
-            <a href="">decoration</a>
-            <a href="">vases</a>
-            <a href="">basics</a>
-          </div>
-        </div>
-        <div class="items-category">
-          <a class="allCategory active" href="">All</a>
-          <a href="">Home Decor</a>
-          <a href="">lighting</a>
-          <a href="">decoration</a>
-          <a href="">vases</a>
-          <a href="">basics</a>
-        </div>
-        <div class="row items-main"></div>
-      </div>
-    </section>
-    <footer>
-      <div class="footer-main">
-        <div class="container">
-          <div class="row">
-            <div class="customer-service">
-              <h5 class="service-heading">customer service</h5>
-              <div class="service-links">
-                <a href=""
-                  ><i class="fa-solid fa-arrow-right me-2 hide"></i>Help &
-                  Contact Us</a
-                >
-                <a href=""
-                  ><i class="fa-solid fa-arrow-right me-2 hide"></i>Returns &
-                  Refunds</a
-                >
-                <a href=""
-                  ><i class="fa-solid fa-arrow-right me-2 hide"></i>Online
-                  Stores</a
-                >
-                <a href=""
-                  ><i class="fa-solid fa-arrow-right me-2 hide"></i>Terms &
-                  Conditions</a
-                >
-              </div>
-            </div>
-            <div class="company">
-              <h5 class="service-heading">company</h5>
-              <div class="service-links">
-                <a href=""
-                  ><i class="fa-solid fa-arrow-right me-2 hide"></i>What We
-                  Do</a
-                >
-                <a href=""
-                  ><i class="fa-solid fa-arrow-right me-2 hide"></i>Available
-                  Services</a
-                >
-                <a href=""
-                  ><i class="fa-solid fa-arrow-right me-2 hide"></i>Latest
-                  Posts</a
-                >
-                <a href=""
-                  ><i class="fa-solid fa-arrow-right me-2 hide"></i>FAQs</a
-                >
-              </div>
-            </div>
-            <div class="social-media">
-              <h5 class="service-heading">social media</h5>
-              <div class="service-links">
-                <a href=""
-                  ><i class="fa-solid fa-arrow-right me-2 hide"></i>Twitter</a
-                >
-                <a href=""
-                  ><i class="fa-solid fa-arrow-right me-2 hide"></i>Instagram</a
-                >
-                <a href=""
-                  ><i class="fa-solid fa-arrow-right me-2 hide"></i>Tumblr</a
-                >
-                <a href=""
-                  ><i class="fa-solid fa-arrow-right me-2 hide"></i>Pinterest</a
-                >
-              </div>
-            </div>
-            <div class="profile">
-              <h5 class="service-heading">profile</h5>
-              <div class="service-links">
-                <a href=""
-                  ><i class="fa-solid fa-arrow-right me-2 hide"></i>My
-                  Account</a
-                >
-                <a href=""
-                  ><i class="fa-solid fa-arrow-right me-2 hide"></i>Checkout</a
-                >
-                <a href=""
-                  ><i class="fa-solid fa-arrow-right me-2 hide"></i>Order
-                  Tracking</a
-                >
-                <a href=""
-                  ><i class="fa-solid fa-arrow-right me-2 hide"></i>Help &
-                  Support</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="rights">
-        <div class="container">
-          <div class="rights-main">
-            <div class="reserved">
-              <p>© 2021 Qode Interactive, All Rights Reserved</p>
-            </div>
-            <div class="follow">
-              <span>Follow Us</span>
-              <a href=""><i class="fa-brands fa-twitter"></i></a>
-              <a href=""><i class="fa-brands fa-instagram"></i></a>
-              <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
   </body>
-  <script src="./src/js/bootstrap.js"></script>
-  <script src="./src/js/app.js"></script>
+  <script src="./src/js/about.js"></script>
 </html>
