@@ -324,9 +324,14 @@ body {
   color: #929292;
 }
 
+.cart-link:empty .cart-price {
+  display: none;
+}
+
 /* FORM */
 
 .form-container {
+  display: none;
   position: absolute;
   top: 55%;
   left: 50%;
@@ -335,6 +340,10 @@ body {
   background-color: #fff;
   padding: 10px 40px 30px 40px;
   border: 1px solid rgba(121, 119, 119, 0.2);
+}
+
+.form-container.show {
+  display: block;
 }
 
 .form-close {
@@ -444,14 +453,6 @@ body {
 
 .register-btn:hover {
   color: #fff;
-}
-
-.form-container {
-  display: none;
-}
-
-.form-container.show {
-  display: block;
 }
 
 /* SEARCH */
@@ -680,6 +681,59 @@ body {
 
 .item:hover .item-price {
   display: none;
+}
+
+/* ITEMS INFO */
+
+#items-info {
+  position: relative;
+}
+
+.info-container {
+  width: 70%;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 111111111;
+  padding: 40px;
+}
+
+.info-close {
+  position: absolute !important;
+  color: #929292;
+  right: 60px;
+  top: 60px;
+  font-size: 22px;
+}
+
+.info-right {
+  background-color: #ffffff;
+  padding: 30px;
+}
+
+.right-top-info h3 {
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 2px;
+  color: #080808;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.right-top-info h2 {
+  font-size: 24px;
+  color: #080808;
+  font-weight: 300;
+}
+
+.right-middle-info {
+  padding: 30px 0;
+}
+
+.info p {
+  font-size: 16px;
+  color: #929292;
 }
 
 /* FOOTER */
