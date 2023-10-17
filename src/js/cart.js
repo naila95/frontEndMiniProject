@@ -11,6 +11,8 @@ let formCloseBtn = document.querySelector(".form-close");
 let prodPrice = document.querySelector(".onePrice");
 let prodCount = document.querySelector(".cart-number");
 let basket = JSON.parse(localStorage.getItem("basket"));
+let total = document.querySelector(".total h3");
+let cartCount = document.querySelector(".cart-count-item");
 
 // WELCOME PAGE
 
@@ -60,20 +62,28 @@ for (let tab of tabs) {
 
 // FETCH
 
-fetch("db.json")
-  .then((rest) => rest.json())
-  .then((data) => {
-    let html = "";
-    basket.forEach((item) => {
-      let element = data.products.find((a) => {
-        return a.id == item.id;
-      });
-      html += `
-      <div class="row">
+dataList = "";
+
+const getItemsCart = () => {
+  fetch("db.json")
+    .then((rest) => rest.json())
+    .then((data) => (dataList = data));
+};
+
+getItemsCart();
+
+const createElementCartHtml = () => {
+  let html = "";
+  basket.forEach((item) => {
+    let element = dataList.find((a) => a.id == item.id);
+    html += `
+      <div class="row mb-3">
       <div class="col-lg-6">
         <div class="cart-items-left row">
           <div class="col-lg-1">
-            <i style="color: #929292" class="fa-solid fa-xmark"></i>
+            <i style="color: #929292" class="fa-solid fa-xmark delete-icon" onclick="removeItem(${
+              element.id
+            })"></i>
           </div>
           <div class="col-lg-4">
             <img
@@ -89,42 +99,79 @@ fetch("db.json")
       <div class="col-lg-6">
         <div class="row cart-items-right">
           <div class="col-lg-2">
-            <span class="onePrice">$${element.price}</span>
+            <span class="onePrice">$${item.price}</span>
           </div>
           <div class="col-lg-8">
             <div class="cart-count">
-              <i
+              <i data-id=${element.id}
+              data-count=${item.count}
+              onclick="decreaseItem(${element.id})"
                 style="color: #929292"
-                class="fa-solid fa-caret-left"
+                class="fa-solid fa-caret-left prev-btn-cart"
               ></i>
-              <span class="cart-number">0</span>
-              <i
+              <span class="cart-number">${item.count}</span>
+              <i data-id=${element.id}
+              data-count=${item.count}
                 style="color: #929292"
-                class="fa-solid fa-caret-right"
+                onclick="increaseItem(${element.id})"
+                class="fa-solid fa-caret-right next-btn-cart"
               ></i>
             </div>
           </div>
           <div class="col-lg-2">
-            <span class="second-price">$45</span>
+            <span class="second-price">$${item.price * item.count}</span>
           </div>
         </div>
       </div>
     </div>
-
         `;
-    });
-    document.querySelector(".cart-items").innerHTML = html;
   });
+  document.querySelector(".cart-items").innerHTML = html;
+};
 
-if (localStorage.getItem("basket") === null) {
-  localStorage.setItem("basket", JSON.stringify([]));
-  prodPrice.textContent = "0";
-  prodCount.textContent = "0";
-} else {
-  let price = 0;
-  basket.forEach((item) => {
-    price += item.price * item.count;
-  });
-  prodPrice.innerText = price.toFixed(2);
-  prodCount.innerText = basket.length;
-}
+setTimeout(() => {
+  createElementCartHtml();
+}, 100);
+
+// REMOVE ITEM
+
+const removeItem = (itemId) => {
+  let clickedIcon = basket.find((i) => i.id == itemId);
+  basket.splice(clickedIcon, 1);
+  localStorage.setItem("basket", JSON.stringify(basket));
+  getItemsCart();
+  createElementCartHtml();
+};
+
+// INCREASE, DECREASE ITEMS
+
+const decreaseItem = (itemId) => {
+  let clickedIcon = basket.find((i) => i.id == itemId);
+  if (clickedIcon.count != 1) {
+    clickedIcon.count--;
+  } else {
+    removeItem();
+  }
+  localStorage.setItem("basket", JSON.stringify(basket));
+  getItemsCart();
+  createElementCartHtml();
+};
+
+const increaseItem = (itemId) => {
+  let clickedIcon = basket.find((i) => i.id == itemId);
+  clickedIcon.count++;
+  localStorage.setItem("basket", JSON.stringify(basket));
+  getItemsCart();
+  createElementCartHtml();
+};
+
+//   // TOTAL
+
+const grandTotal = (arr) => {
+  return arr.reduce((sum, i) => {
+    return sum + i.price * i.count;
+  }, 0);
+};
+
+total.innerText = grandTotal(basket) + "$";
+cartCount.innerText = "(" + basket.length + ")";

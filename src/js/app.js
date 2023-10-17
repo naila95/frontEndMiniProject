@@ -13,6 +13,7 @@ let welcomeClose = document.querySelector(".welcome-close-icon");
 let welcomeOpen = document.querySelector(".welcome-open-icon");
 let basket = JSON.parse(localStorage.getItem("basket"));
 let html = "";
+let cartCount = document.querySelector(".cart-count-item");
 
 if (localStorage.getItem("basket") === null) {
   localStorage.setItem("basket", JSON.stringify([]));
@@ -78,11 +79,10 @@ fetch("db.json")
   .then((rest) => rest.json())
   .then((data) => {
     let html = "";
-    data.products.forEach((product) => {
+    data.forEach((product) => {
       html += `
       <div class="col-md-6 col-lg-3 col-sm-12">
       <div class="item">
-        <span></span>
         <img class="img-fluid" src="${product.image}" />
         <div class="item-content">
           <a class="item-name" href="">${product.name}</a>
@@ -98,15 +98,18 @@ fetch("db.json")
     // ADD TO BASKET
 
     let addBasket = document.querySelectorAll(".addToCart");
+
     addBasket.forEach((btn) => {
       btn.addEventListener("click", function (e) {
         e.preventDefault();
+
         if (localStorage.getItem("basket") === null) {
           localStorage.setItem("basket", JSON.stringify([]));
         }
+
         let data_id = e.target.getAttribute("data-id");
         let data_price = e.target.getAttribute("data-price");
-        let exist = basket.find((p) => (p.id = data_id));
+        let exist = basket.find((p) => p.id == data_id);
 
         if (exist) {
           exist.count++;
@@ -121,38 +124,21 @@ fetch("db.json")
         localStorage.setItem("basket", JSON.stringify(basket));
       });
     });
-    console.log(basket);
   });
 
-// FILTER
-
-// function createCategories() {
-//   let category = document.querySelector(".items-category");
-//   let filterHtml = "";
-//   let categoryTypes = ["All"];
-//   data.products.forEach((product) => {
-//     if (categoryTypes.findIndex((filter) => (filter = category.type)) == -1)
-//       categoryTypes.push(product.category);
-//   });
-
-//   categoryTypes.forEach((category) => {
-//     filterHtml += `
-//     <a class="active">${category}</a>
-//     `;
-//   });
-
-//   category.innerHTML = filterHtml;
-// }
+cartCount.innerText = "(" + basket.length + ")";
 
 // let itemList = [];
 
-// const getItems = () => {
-//   fetch("db.json")
-//     .then((res) => res.json())
-//     .then((item) => (itemList = item));
-// };
+// const getItems = async () => {
+//   let products = await fetch("db.json");
+//   let results = await products.json();
 
+//   return [...itemList, results.products];
+// };
 // getItems();
+
+// console.log(getItems);
 
 // const createElement = () => {
 //   let html = "";

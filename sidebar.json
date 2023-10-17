@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Basket with handles",
+    "category": "home decor",
+    "price": 160,
+    "image": "./src/img/h1-product-11-600x728 (2).jpg",
+    "color": "black"
+  },
+  {
+    "id": 2,
+    "name": "flower vase",
+    "category": "vases",
+    "price": 170,
+    "image": "./src/img/h1-product-7-600x728.jpg",
+    "color": "white"
+  },
+  {
+    "id": 3,
+    "name": "modern lamp",
+    "category": "lighting",
+    "price": 90,
+    "image": "./src/img/h3-product-2-600x728.jpg",
+    "color": "black"
+  },
+  {
+    "id": 4,
+    "name": "pottery vase",
+    "category": "vases",
+    "price": 60,
+    "image": "./src/img/h3-product-3-600x728.jpg",
+    "color": "white"
+  },
+  {
+    "id": 5,
+    "name": "rose holdback",
+    "category": "basics",
+    "price": 24,
+    "image": "./src/img/h3-product-4-600x728.jpg",
+    "color": "grey"
+  },
+  {
+    "id": 6,
+    "name": "modern chair",
+    "category": "basics",
+    "price": 55,
+    "image": "./src/img/h1-product-1-600x728.jpg",
+    "color": "white"
+  },
+  {
+    "id": 7,
+    "name": "modern table",
+    "category": "basics",
+    "price": 75,
+    "image": "./src/img/h1-product-4-600x728.jpg",
+    "color": "white"
+  },
+  {
+    "id": 8,
+    "name": "wall clock",
+    "category": "decoration",
+    "price": 110,
+    "image": "./src/img/h1-product-5-600x728.jpg",
+    "color": "black"
+  },
+  {
+    "id": 9,
+    "name": "modern table",
+    "category": "basics",
+    "price": 90,
+    "image": "./src/img/h1-product-6-600x728.jpg",
+    "color": "brown"
+  },
+  {
+    "id": 10,
+    "name": "pottery vase",
+    "category": "vases",
+    "price": 60,
+    "image": "./src/img/h1-product-2-600x728.jpg",
+    "color": "grey"
+  },
+  {
+    "id": 11,
+    "name": "rose holdback",
+    "category": "lighting",
+    "price": 24,
+    "image": "./src/img/h1-product-3-1-600x728.jpg",
+    "color": "rose"
+  },
+  {
+    "id": 12,
+    "name": "modern chair",
+    "category": "basics",
+    "price": 55,
+    "image": "./src/img/h1-product-1-600x728.jpg",
+    "color": "white"
+  }
+]

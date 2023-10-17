@@ -1,68 +1,66 @@
-{
-  "products": [
-    {
-      "id": 1,
-      "name": "Basket with handles",
-      "category": "home decor",
-      "price": 160,
-      "isNew": true,
-      "image": "./src/img/h1-product-11-600x728 (2).jpg"
-    },
-    {
-      "id": 2,
-      "name": "flower vase",
-      "category": "vases",
-      "price": 170,
-      "isNew": true,
-      "image": "./src/img/h1-product-7-600x728.jpg"
-    },
-    {
-      "id": 3,
-      "name": "modern table",
-      "category": "basics",
-      "price": 75,
-      "isNew": false,
-      "image": "./src/img/h1-product-4-600x728.jpg"
-    },
-    {
-      "id": 4,
-      "name": "wall clock",
-      "category": "decoration",
-      "price": 110,
-      "isNew": false,
-      "image": "./src/img/h1-product-5-600x728.jpg"
-    },
-    {
-      "id": 5,
-      "name": "modern table",
-      "category": "basics",
-      "price": 90,
-      "isNew": false,
-      "image": "./src/img/h1-product-6-600x728.jpg"
-    },
-    {
-      "id": 6,
-      "name": "pottery vase",
-      "category": "vases",
-      "price": 60,
-      "isNew": false,
-      "image": "./src/img/h1-product-2-600x728.jpg"
-    },
-    {
-      "id": 7,
-      "name": "rose holdback",
-      "category": "lighting",
-      "price": 24,
-      "isNew": false,
-      "image": "./src/img/h1-product-3-1-600x728.jpg"
-    },
-    {
-      "id": 8,
-      "name": "modern chair",
-      "category": "basics",
-      "price": 55,
-      "isNew": true,
-      "image": "./src/img/h1-product-1-600x728.jpg"
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "name": "Basket with handles",
+    "category": "home decor",
+    "price": 160,
+    "isNew": true,
+    "image": "./src/img/h1-product-11-600x728 (2).jpg"
+  },
+  {
+    "id": 2,
+    "name": "flower vase",
+    "category": "vases",
+    "price": 170,
+    "isNew": true,
+    "image": "./src/img/h1-product-7-600x728.jpg"
+  },
+  {
+    "id": 3,
+    "name": "modern table",
+    "category": "basics",
+    "price": 75,
+    "isNew": false,
+    "image": "./src/img/h1-product-4-600x728.jpg"
+  },
+  {
+    "id": 4,
+    "name": "wall clock",
+    "category": "decoration",
+    "price": 110,
+    "isNew": false,
+    "image": "./src/img/h1-product-5-600x728.jpg"
+  },
+  {
+    "id": 5,
+    "name": "modern table",
+    "category": "basics",
+    "price": 90,
+    "isNew": false,
+    "image": "./src/img/h1-product-6-600x728.jpg"
+  },
+  {
+    "id": 6,
+    "name": "pottery vase",
+    "category": "vases",
+    "price": 60,
+    "isNew": false,
+    "image": "./src/img/h1-product-2-600x728.jpg"
+  },
+  {
+    "id": 7,
+    "name": "rose holdback",
+    "category": "lighting",
+    "price": 24,
+    "isNew": false,
+    "image": "./src/img/h1-product-3-1-600x728.jpg"
+  },
+  {
+    "id": 8,
+    "name": "modern chair",
+    "category": "basics",
+    "price": 55,
+    "isNew": true,
+    "image": "./src/img/h1-product-1-600x728.jpg"
+  }
+]

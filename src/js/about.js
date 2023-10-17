@@ -10,6 +10,8 @@ let formContainer = document.querySelector(".form-container");
 let formCloseBtn = document.querySelector(".form-close");
 let tabsAbout = document.querySelectorAll(".tabs-about div");
 let contentAbout = document.querySelectorAll(".about-content div");
+let cartCount = document.querySelector(".cart-count-item");
+let basket = JSON.parse(localStorage.getItem("basket"));
 
 // WELCOME PAGE
 
@@ -73,3 +75,5 @@ for (let tab of tabsAbout) {
     }
   });
 }
+
+cartCount.innerText = "(" + basket.length + ")";

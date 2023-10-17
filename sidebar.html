@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About</title>
+    <title>Sidebar</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="./src/css/bootstrap.css" />
     <link rel="stylesheet" href="./src/css/style.css" />
-    <link rel="stylesheet" href="./src/css/about.css" />
+    <link rel="stylesheet" href="./src/css/sidebar.css" />
   </head>
   <body>
     <header id="comp-header">
@@ -21,24 +21,13 @@
         <div class="row">
           <div class="top-header">
             <div class="custom-nav">
-              <div class="logo">
-                <div class="img-div">
-                  <a href="">
-                    <img
-                      class="img-fluid"
-                      src="./src/img/logo2.png"
-                      alt="logo"
-                    />
-                  </a>
-                </div>
-              </div>
               <div class="left-nav">
                 <ul>
                   <li>
                     <div class="home">
-                      <a class="home-link" href="index.html">HOME</a>
+                      <a class="home-link" href="">HOME</a>
                       <div class="home-dropdown">
-                        <a class="mainHome" href=""
+                        <a class="mainHome" href="./index.html"
                           ><i class="fa-solid fa-arrow-right me-2"></i>Main
                           Home</a
                         >
@@ -99,7 +88,7 @@
                       <div class="shop-dropdown">
                         <div class="shop-types">
                           <a href=""><h3>Shop types</h3></a>
-                          <a href="./sidebar.html"
+                          <a href=""
                             ><i class="fa-solid fa-arrow-right me-2 hide"></i
                             >Left Sidebar</a
                           >
@@ -232,7 +221,7 @@
                     <div class="page">
                       <a class="page-link-custom" href="">PAGES</a>
                       <div class="page-dropdown">
-                        <a href="about.html"
+                        <a href="./about.html"
                           ><i class="fa-solid fa-arrow-right me-2 hide"></i
                           >About Us</a
                         >
@@ -460,7 +449,17 @@
                   </li>
                 </ul>
               </div>
-
+              <div class="logo">
+                <div class="img-div">
+                  <a href="">
+                    <img
+                      class="img-fluid"
+                      src="./src/img/logo2.png"
+                      alt="logo"
+                    />
+                  </a>
+                </div>
+              </div>
               <div class="right-nav">
                 <div class="cart">
                   <a class="cart-link" href="cart.html"
@@ -657,156 +656,45 @@
         </div>
       </div>
     </section>
-    <section id="about-background">
-      <div class="cart-text">
-        <h6>ABOUT US</h6>
-      </div>
-    </section>
-    <section id="about-first">
+    <section id="withSidebar">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <img class="img-fluid" src="./src/img/about-img-2.jpg" alt="" />
-          </div>
-          <div class="col-lg-6">
-            <div class="tab-menu-container">
-              <div class="tabs-about">
-                <div class="active-about about-tabs-heading" data-index="1">
-                  ABOUT US
-                </div>
-                <div class="about-tabs-heading" data-index="2">SERVICES</div>
-                <div class="about-tabs-heading" data-index="3">HISTORY</div>
-              </div>
-              <div class="about-content">
-                <div class="show" data-index="1">
-                  <p>
-                    Vestibulum ultricies aliquam convallis. Maecenas ut tellus
-                    mi. Proin tincidunt, lectus eu volutpat mattis, ante metus
-                    lacinia tellus, vitae condimentum nulla enim bibendum nibh.
-                    Praesent turpis risus, interdum nec venenatis id, pretium
-                    sit amet purus. Interdum et malesuada fames ac ante ipsum
-                    primis in faucibus. Aliquam eu lorem nibh. Mauris ex dolor,
-                    rutrum in odio vel, suscipit ultrices nunc. Cras ipsum
-                    dolor, eleifend et nisl vel, tempor molestie nibh.
-                  </p>
-                </div>
-                <div data-index="2">
-                  <p>
-                    Cras ipsum dolor, eleifend et nisl vel, tempor molestie
-                    nibh. In hac habitasse platea dictumst. Proin nec blandit
-                    ligula. Donec volutpat leo turpis, vel accumsan nunc
-                    convallis id. Vestibulum ultricies aliquam convallis.
-                    Maecenas ut tellus mi. Proin tincidunt, lectus eu volutpat
-                    mattis, ante metus lacinia tellus, vitae condimentum nulla
-                    enim bibendum nibh. Praesent turpis risus, interdum nec
-                    venenatis id, pretium sit amet purus. Interdum et malesuada
-                    fames ac ante ipsum.
-                  </p>
-                </div>
-                <div data-index="3">
-                  <p>
-                    Donec volutpat leo turpis, vel accumsan nunc convallis id.
-                    Vestibulum ultricies aliquam convallis. Maecenas ut tellus
-                    mi. Proin tincidunt, lectus eu volutpat mattis, ante metus
-                    lacinia tellus, vitae condimentum nulla enim bibendum nibh.
-                    Cras ipsum dolor, eleifend et nisl vel, tempor molestie
-                    nibh. In hac habitasse platea dictumst. Praesent turpis
-                    risus, interdum nec venenatis id, pretium sit amet purus.
-                    Interdum et malesuada fames ac ante ipsum primis. Proin nec.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="about-learn">
-              <a class="learn-link" href=""
-                >learn more<i
-                  class="about-arrow fa-solid fa-arrow-right-long"
-                ></i
-              ></a>
-            </div>
+        <div class="with">
+          <div style="margin-top: 2rem">
+            <a href="./index.html">Home</a>
+            <a href="">/</a>
+            <a href="">With Sidebar</a>
           </div>
         </div>
       </div>
     </section>
-    <section id="about-slider">
+    <section id="sidebar-main">
       <div class="container">
-        <div
-          id="carouselExampleControls"
-          class="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div class="slider-container">
-            <div class="carousel-inner slider">
-              <div class="carousel-item active">
-                <div class="slider">
-                  <h3 class="slider-heading">WHAT THEY'RE SAYING</h3>
-                  <p class="info-slider">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Repellat blanditiis, alias doloremque, nisi recusandae,
-                    ipsum dolore quisquam qui natus aperiam excepturi sit?
-                    Sapiente, dolore adipisci. Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. Non, eveniet. Lorem ipsum
-                    dolor sit amet. Lorem, ipsum dolor.
-                  </p>
-                  <h5 class="slider-name">kelly preston</h5>
-                  <span class="profession">Developer</span>
-                </div>
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="sidebar-left-side">
+              <div class="color-name">
+                <h3>color</h3>
               </div>
-              <div class="carousel-item">
-                <div class="slider">
-                  <h3 class="slider-heading">WHAT THEY'RE SAYING</h3>
-                  <p class="info-slider">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Repellat blanditiis, alias doloremque, nisi recusandae,
-                    ipsum dolore quisquam qui natus aperiam excepturi sit?
-                    Sapiente, dolore adipisci. Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. Non, eveniet. Lorem ipsum
-                    dolor sit amet. Lorem, ipsum dolor.
-                  </p>
-                  <h5 class="slider-name">christine parker</h5>
-                  <span class="profession">UX Designer</span>
-                </div>
+              <div class="color">
+                <!-- <a href="">Black</a>
+                <a href="">White</a>
+                <a href="">Rose</a>
+                <a href="">Grey</a>
+                <a href="">Brown</a> -->
               </div>
-              <div class="carousel-item">
-                <div class="slider">
-                  <h3 class="slider-heading">WHAT THEY'RE SAYING</h3>
-                  <p class="info-slider">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Repellat blanditiis, alias doloremque, nisi recusandae,
-                    ipsum dolore quisquam qui natus aperiam excepturi sit?
-                    Sapiente, dolore adipisci. Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. Non, eveniet. Lorem ipsum
-                    dolor sit amet. Lorem, ipsum dolor.
-                  </p>
-                  <h5 class="slider-name">mason robinson</h5>
-                  <span class="profession">Analyst</span>
-                </div>
+              <div class="material-name">
+                <h3>material</h3>
+              </div>
+              <div class="material">
+                <a href="">Wood</a>
+                <a href="">Glass</a>
+                <a href="">Chrome</a>
+                <a href="">Metal</a>
               </div>
             </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleControls"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleControls"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+          </div>
+          <div class="col-lg-9">
+            <div class="row sidebar-items"></div>
           </div>
         </div>
       </div>
@@ -908,5 +796,5 @@
     </footer>
   </body>
   <script src="./src/js/bootstrap.js"></script>
-  <script src="./src/js/about.js"></script>
+  <script src="./src/js/sidebar.js"></script>
 </html>

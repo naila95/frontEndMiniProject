@@ -180,3 +180,8 @@ footer {
 .service-heading {
   color: #fff;
 }
+
+.prev-btn-cart,
+.next-btn-cart {
+  cursor: pointer;
+}
