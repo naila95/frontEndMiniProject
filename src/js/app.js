@@ -82,21 +82,37 @@ fetch("db.json")
     data.forEach((product) => {
       html += `
       <div class="col-md-6 col-lg-3 col-sm-12">
-      <div class="item">
-        <img class="img-fluid" src="${product.image}" />
-        <div class="item-content">
-          <a class="item-name" href="">${product.name}</a>
-          <p class="item-price">$${product.price}</p>
-          <a class="addToCart" href="#" data-price="${product.price}" data-id="${product.id}">Add to cart</a>
+        <div class="item">
+          <a class="product-link" data-id="${product.id}" href="">
+          <img class="img-fluid" src="${product.image}" />
+          <div class="item-content">
+            <a class="item-name" href="">${product.name}</a>
+            <p class="item-price">$${product.price}</p>
+            <a class="addToCart" href="#" data-price="${product.price}" data-id="${product.id}">Add to cart</a>
+          </div>
+          </a>
         </div>
       </div>
-    </div>
         `;
     });
     document.querySelector(".items-main").innerHTML = html;
 
-    // ADD TO BASKET
+    // DETAIL PAGE
 
+    let links = document.querySelectorAll(".product-link");
+
+    links.forEach((element) => {
+      element.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        let data_id = element.getAttribute("data-id");
+
+        localStorage.setItem("product-detail", JSON.stringify(data_id));
+        window.location.replace("http://127.0.0.1:5500/details.html");
+      });
+    });
+
+    // ADD TO BASKET
     let addBasket = document.querySelectorAll(".addToCart");
 
     addBasket.forEach((btn) => {
@@ -122,41 +138,9 @@ fetch("db.json")
         }
 
         localStorage.setItem("basket", JSON.stringify(basket));
+        cartCount.innerText = "(" + basket.length + ")";
       });
     });
   });
 
 cartCount.innerText = "(" + basket.length + ")";
-
-// let itemList = [];
-
-// const getItems = async () => {
-//   let products = await fetch("db.json");
-//   let results = await products.json();
-
-//   return [...itemList, results.products];
-// };
-// getItems();
-
-// console.log(getItems);
-
-// const createElement = () => {
-//   let html = "";
-//   itemList.forEach((product) => {
-//     html += `
-// <div class="col-md-6 col-lg-3 col-sm-12">
-//     <div class="item">
-//       <span></span>
-//       <img class="img-fluid" src="${product.image}" />
-//       <div class="item-content">
-//         <a class="item-name" href="">${product.name}</a>
-//         <p class="item-price">$${product.price}</p>
-//         <a class="addToCart" href="#">Add to cart</a>
-//       </div>
-//     </div>
-//   </div>
-//       `;
-//   });
-//   document.querySelector(".items-main").innerHTML = html;
-// };
-// createElement();

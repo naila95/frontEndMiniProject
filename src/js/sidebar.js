@@ -108,15 +108,18 @@ const createSidebarHtml = () => {
 setTimeout(() => {
   createSidebarHtml();
   createFilters();
+  createMaterialFilter();
 }, 100);
+
+// FILTER COLOR
 
 const createFilters = () => {
   const filterColor = document.querySelector(".color");
   let filterColorHtml = "";
   let colorTypes = ["Black", "White", "Rose", "Grey", "Brown"];
   sidebarList.forEach((elem) => {
-    if (colorTypes.findIndex((color) => color == elem.type) == 1)
-      colorTypes.push(elem.type);
+    if (colorTypes.findIndex((color) => color == elem.color) == 1)
+      colorTypes.push(elem.color);
   });
 
   colorTypes.forEach((type) => {
@@ -125,11 +128,109 @@ const createFilters = () => {
     `;
   });
   filterColor.innerHTML = filterColorHtml;
+  document.querySelectorAll(".color a").forEach((item) => {
+    item.addEventListener("click", function (e) {
+      e.preventDefault();
+    });
+  });
 };
 
 const filterColors = (colorTypes) => {
   let colors = colorTypes.dataset.color;
   getSidebarItems();
-  sidebarList = sidebarList.filter((item) => item.color == colors);
+  sidebarList = sidebarList.filter((item) => {
+    return item.color.toLowerCase() == colors.toLowerCase();
+  });
+  let sidebarHtml = "";
+  sidebarList.forEach((item) => {
+    sidebarHtml += `
+                    <div class="col-lg-3 mb-3">
+                      <div class="slidebar-item">
+                        <img
+                          class="img-fluid"
+                          src="${item.image}"
+                          alt=""
+                        />
+                        <div class="text-center">
+                          <h6 class="sidebar-item-name">${item.name}</h6>
+                          <div class="rate mb-2">
+                            <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                            <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                            <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                            <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                            <i
+                              style="color: #ebbc00"
+                              class="fa-regular fa-star"
+                            ></i>
+                          </div>
+                          <h6 class="sidebar-item-price">${item.price}$</h6>
+                        </div>
+                      </div>
+                    </div>
+        `;
+  });
+  sidebarItems.innerHTML = sidebarHtml;
+  createFilters();
+};
+
+// FILTER MATERIAL
+
+const createMaterialFilter = () => {
+  const filterMaterial = document.querySelector(".material");
+  let filterMaterialHtml = "";
+  let materialTypes = ["Wood", "Concrete", "Metal"];
+  sidebarList.forEach((elem) => {
+    if (materialTypes.findIndex((material) => material == elem.material) == 1)
+      materialTypes.push(elem.material);
+  });
+
+  materialTypes.forEach((type) => {
+    filterMaterialHtml += `
+    <a href="" onclick= "sortMaterials(this)" data-material=${type}>${type}</a>
+    `;
+  });
+  filterMaterial.innerHTML = filterMaterialHtml;
+  document.querySelectorAll(".material a").forEach((item) => {
+    item.addEventListener("click", function (e) {
+      e.preventDefault();
+    });
+  });
+};
+
+const sortMaterials = (material) => {
+  let materials = material.dataset.material;
+  getSidebarItems();
+  sidebarList = sidebarList.filter((item) => {
+    return item.material.toLowerCase() == materials.toLowerCase();
+  });
+  let sidebarHtml = "";
+  sidebarList.forEach((item) => {
+    sidebarHtml += `
+                    <div class="col-lg-3 mb-3">
+                      <div class="slidebar-item">
+                        <img
+                          class="img-fluid"
+                          src="${item.image}"
+                          alt=""
+                        />
+                        <div class="text-center">
+                          <h6 class="sidebar-item-name">${item.name}</h6>
+                          <div class="rate mb-2">
+                            <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                            <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                            <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                            <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                            <i
+                              style="color: #ebbc00"
+                              class="fa-regular fa-star"
+                            ></i>
+                          </div>
+                          <h6 class="sidebar-item-price">${item.price}$</h6>
+                        </div>
+                      </div>
+                    </div>
+        `;
+  });
+  sidebarItems.innerHTML = sidebarHtml;
   createFilters();
 };

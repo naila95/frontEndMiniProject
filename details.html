@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sidebar</title>
+    <title>Details</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="./src/css/bootstrap.css" />
     <link rel="stylesheet" href="./src/css/style.css" />
-    <link rel="stylesheet" href="./src/css/sidebar.css" />
+    <link rel="stylesheet" href="./src/css/details.css" />
   </head>
   <body>
     <header id="comp-header">
@@ -25,9 +25,9 @@
                 <ul>
                   <li>
                     <div class="home">
-                      <a class="home-link" href="">HOME</a>
+                      <a class="home-link" href="./index.html">HOME</a>
                       <div class="home-dropdown">
-                        <a class="mainHome" href="./index.html"
+                        <a class="mainHome" href=""
                           ><i class="fa-solid fa-arrow-right me-2"></i>Main
                           Home</a
                         >
@@ -88,7 +88,7 @@
                       <div class="shop-dropdown">
                         <div class="shop-types">
                           <a href=""><h3>Shop types</h3></a>
-                          <a href=""
+                          <a href="./sidebar.html"
                             ><i class="fa-solid fa-arrow-right me-2 hide"></i
                             >Left Sidebar</a
                           >
@@ -462,7 +462,7 @@
               </div>
               <div class="right-nav">
                 <div class="cart">
-                  <a class="cart-link" href="cart.html"
+                  <a class="cart-link" href="./cart.html"
                     >Cart
                     <span style="color: brown" class="cart-count-item"></span
                   ></a>
@@ -656,39 +656,239 @@
         </div>
       </div>
     </section>
-    <section id="withSidebar">
+    <section id="main-details">
       <div class="container">
-        <div class="with">
-          <div style="margin-top: 2rem">
-            <a href="./index.html">Home</a>
-            <a href="">/</a>
-            <a href="">With Sidebar</a>
+        <div class="details-link">
+          <a href="./index.html">Home</a>
+          <span>/</span>
+          <a href="./sidebar.html">With Sidebar</a>
+          <span>/</span>
+          <a href="">Home Decor</a>
+          <span>/</span>
+          <a href="">Deco Accessory</a>
+        </div>
+        <div class="row details">
+          <div class="col-lg-5">
+            <img class="img-fluid" id="product-detail-image" src="" />
+          </div>
+          <div class="col-lg-6 details-right">
+            <div class="details-content">
+              <h3 id="product-detail-name"></h3>
+              <h4 id="product-detail-price"></h4>
+            </div>
+            <div class="rate mb-3">
+              <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+              <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+              <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+              <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+              <i style="color: #ebbc00" class="fa-regular fa-star"></i>
+            </div>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis
+              hic commodi, corrupti fugit dolor totam tenetur repellendus itaque
+              quisquam maiores maxime, impedit suscipit! Quisquam, quo.
+            </p>
+            <div class="details-to-cart">
+              <div class="left-detail-cart">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="quantity">
+                      <span>Quantity</span>
+                      <i
+                        style="color: #929292"
+                        class="fa-solid fa-caret-left detail-decrease-icon"
+                      ></i>
+                      <span class="detail-count">0</span>
+                      <i
+                        style="color: #929292"
+                        class="fa-solid fa-caret-right detail-increase-icon"
+                      ></i>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="quantity-btn">
+                      <a class="add-basket-detail" href="">Add to cart</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="details-tags">
+              <p>SKU: 006</p>
+              <p>
+                Categories: <a style="color: #929292" href="">Basics,</a>
+                <a style="color: #929292" href="">Home Decor</a>
+              </p>
+              <p>
+                Tags: <a style="color: #929292" href="">Decoration,</a
+                ><a style="color: #929292" href="">Modern</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="details-tab">
+          <div class="tab-menu-container">
+            <div class="tabs-details">
+              <div class="active-details details-tab-heading" data-index="1">
+                DESCRIPTION
+              </div>
+              <div class="details-tab-heading" data-index="2">
+                ADDITIONAL INFORMATION
+              </div>
+              <div class="details-tab-heading" data-index="3">REVIEWS</div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="sidebar-main">
+    <section id="tabs-bottom">
       <div class="container">
+        <div class="details-content2">
+          <div class="details-content-div show" data-index="1">
+            <h2>description</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut
+              ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus
+              et magnis dis parturient montes nascetur ridiculus mus. Vestibulum
+              ultricies aliquam convallis. Maecenas ut tellus mi. Proin
+              tincidunt, lectus eu volutpat mattis, ante metus lacinia tellus,
+              vitae condimentum nulla enim bibendum nibh. Praesent turpis risus,
+              interdum nec venenatis id, pretium sit amet purus. Interdum et
+              malesuada fames.
+            </p>
+          </div>
+          <div class="details-content-div" data-index="2">
+            <h2>additional information</h2>
+            <p>Weight : 2 kg</p>
+            <p>Dimensions : 10 x 10 x 15 cm</p>
+            <p>Color : Gold, White</p>
+            <p>Material : Concrete, Metal</p>
+          </div>
+          <div class="details-content-div" data-index="3">
+            <h2>1 REVIEW FOR FLOWER VASE</h2>
+            <div class="d-flex">
+              <div class="me-4">
+                <img src="./src/img/review.png" />
+              </div>
+              <div>
+                <div class="rate mb-2">
+                  <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                  <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                  <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                  <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                  <i style="color: #ebbc00" class="fa-regular fa-star"></i>
+                </div>
+                <h5>Olivia Smith</h5>
+                <p>Amazing!</p>
+              </div>
+            </div>
+            <h2 class="mt-3">add a review</h2>
+            <p class="review">Your review*</p>
+            <textarea style="width: 52%" rows="8"></textarea>
+            <p class="review">Name*</p>
+            <input class="tab-input" type="text" />
+            <p class="review">Email*</p>
+            <input class="tab-input" type="email" />
+            <div class="form-check mt-4 mb-5">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="defaultCheck1"
+              />
+              <label class="form-check-label" for="defaultCheck1">
+                Save my name, email, and website in this browser for the next
+                time I comment.
+              </label>
+            </div>
+            <a class="submit-btn" href="">submit</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="related">
+      <div class="container">
+        <h6 class="related-heading">related products</h6>
         <div class="row">
           <div class="col-lg-3">
-            <div class="sidebar-left-side">
-              <div class="color-name">
-                <h3>color</h3>
-              </div>
-              <div class="color"></div>
-              <div class="material-name">
-                <h3>material</h3>
-              </div>
-              <div class="material">
-                <!-- <a href="">Wood</a>
-                <a href="">Concrete</a>
-                <a href="">Chrome</a>
-                <a href="">Metal</a> -->
+            <div class="details-item">
+              <img
+                class="img-fluid"
+                src="./src/img/h1-product-2-600x728.jpg"
+                alt=""
+              />
+              <div class="text-center mt-4">
+                <h6 class="details-item-name">Product Name</h6>
+                <div class="rate mb-2">
+                  <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                  <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                  <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                  <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                  <i style="color: #ebbc00" class="fa-regular fa-star"></i>
+                </div>
+                <h6 class="details-item-price">45$</h6>
               </div>
             </div>
           </div>
-          <div class="col-lg-9">
-            <div class="row sidebar-items"></div>
+          <div class="col-lg-3">
+            <div class="details-item">
+              <img
+                class="img-fluid"
+                src="./src/img/h1-product-4-600x728.jpg"
+                alt=""
+              />
+              <div class="text-center mt-4">
+                <h6 class="details-item-name">Product Name</h6>
+                <div class="rate mb-2">
+                  <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                  <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                  <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                  <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                  <i style="color: #ebbc00" class="fa-regular fa-star"></i>
+                </div>
+                <h6 class="details-item-price">45$</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="details-item">
+              <img
+                class="img-fluid"
+                src="./src/img/h1-product-5-600x728.jpg"
+                alt=""
+              />
+              <div class="text-center mt-4">
+                <h6 class="details-item-name">Product Name</h6>
+                <div class="rate mb-2">
+                  <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                  <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                  <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                  <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                  <i style="color: #ebbc00" class="fa-regular fa-star"></i>
+                </div>
+                <h6 class="details-item-price">45$</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="details-item">
+              <img
+                class="img-fluid"
+                src="./src/img/h1-product-6-600x728.jpg"
+                alt=""
+              />
+              <div class="text-center mt-4">
+                <h6 class="details-item-name">Product Name</h6>
+                <div class="rate mb-2">
+                  <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                  <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                  <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                  <i style="color: #ebbc00" class="fa-solid fa-star"></i>
+                  <i style="color: #ebbc00" class="fa-regular fa-star"></i>
+                </div>
+                <h6 class="details-item-price">45$</h6>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -789,6 +989,5 @@
       </div>
     </footer>
   </body>
-  <script src="./src/js/bootstrap.js"></script>
-  <script src="./src/js/sidebar.js"></script>
+  <script src="./src/js/details.js"></script>
 </html>

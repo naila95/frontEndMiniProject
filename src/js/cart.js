@@ -62,7 +62,7 @@ for (let tab of tabs) {
 
 // FETCH
 
-dataList = "";
+let dataList = [];
 
 const getItemsCart = () => {
   fetch("db.json")
@@ -137,10 +137,12 @@ setTimeout(() => {
 
 const removeItem = (itemId) => {
   let clickedIcon = basket.find((i) => i.id == itemId);
-  basket.splice(clickedIcon, 1);
+  basket.splice(basket.indexOf(clickedIcon), 1);
   localStorage.setItem("basket", JSON.stringify(basket));
   getItemsCart();
   createElementCartHtml();
+  total.innerText = grandTotal(basket) + "$";
+  cartCount.innerText = "(" + basket.length + ")";
 };
 
 // INCREASE, DECREASE ITEMS
@@ -155,6 +157,8 @@ const decreaseItem = (itemId) => {
   localStorage.setItem("basket", JSON.stringify(basket));
   getItemsCart();
   createElementCartHtml();
+  total.innerText = grandTotal(basket) + "$";
+  cartCount.innerText = "(" + basket.length + ")";
 };
 
 const increaseItem = (itemId) => {
@@ -163,6 +167,8 @@ const increaseItem = (itemId) => {
   localStorage.setItem("basket", JSON.stringify(basket));
   getItemsCart();
   createElementCartHtml();
+  total.innerText = grandTotal(basket) + "$";
+  cartCount.innerText = "(" + basket.length + ")";
 };
 
 //   // TOTAL

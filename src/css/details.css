@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#main-details {
+  background-color: #fafafa;
+}
+
+.details-link {
+  padding: 3rem 0;
+}
+
+.details-link a,
+.details-link span {
+  color: #929292;
+  margin-right: 5px;
+}
+
+.details-right {
+  padding: 0 3rem;
+}
+
+.details-content {
+  margin-bottom: 4rem;
+}
+
+.details-content h3,
+h4 {
+  color: #080808;
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.details-content h4 {
+  font-weight: 400;
+}
+
+.details-right p {
+  color: #929292;
+  font-size: 16px;
+}
+
+.left-detail-cart {
+  width: 80%;
+  border: 1px solid #929292;
+  margin-top: 5rem;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.quantity-btn {
+  background-color: #080808;
+  text-align: center;
+  padding: 15px;
+}
+
+.quantity-btn a {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.details-tags {
+  margin-top: 3rem;
+}
+
+.details-tags p {
+  margin-bottom: 0;
+  color: #080808;
+}
+
+.details-tab {
+  margin-top: 6rem;
+}
+
+.tabs-details {
+  display: flex;
+}
+
+.details-tab-heading {
+  color: #111;
+  padding: 20px 50px;
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 12px;
+}
+
+.details-tab-heading.active-details {
+  background-color: #080808;
+  color: #fff;
+}
+
+#tabs-bottom {
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.details-content2 h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 3.7px;
+  color: #080808;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.details-content2 p {
+  font-size: 16px;
+  color: #929292;
+}
+
+.details-content-div.show {
+  margin-top: 5rem;
+  display: block;
+}
+
+.details-content-div {
+  display: none;
+  margin-bottom: 3rem;
+}
+
+.review {
+  color: #080808 !important;
+  font-size: 16px !important;
+  margin-top: 10px;
+}
+
+.details-content2 .tab-input {
+  width: 52%;
+  padding: 10px;
+  border: 1px solid #929292;
+  outline: none;
+}
+
+.submit-btn {
+  padding: 14px 48px;
+  background-color: #080808;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  color: #fff;
+}
+
+#related {
+  padding: 5rem 0;
+}
+
+.related-heading {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #929292;
+  letter-spacing: 3.7px;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.details-item-name {
+  color: #080808;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  font-size: 14px;
+}
+
+.details-item-price {
+  color: #929292;
+}
+
+footer {
+  background-color: #080808;
+}
+
+@media (max-width: 576px) {
+  .tabs-details {
+    display: block;
+  }
+
+  .details-tab-heading {
+    width: 100%;
+  }
+}
