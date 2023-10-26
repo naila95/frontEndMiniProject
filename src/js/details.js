@@ -15,7 +15,9 @@ let detailsContent = document.querySelectorAll(".details-content-div");
 let detailsTab = document.querySelectorAll(".details-tab-heading");
 let basket = JSON.parse(localStorage.getItem("basket"));
 let cartCount = document.querySelector(".cart-count-item");
+cartCount.innerText = "(" + basket.length + ")";
 let detailsList = [];
+let initialCount = 0;
 
 let productDetail = JSON.parse(localStorage.getItem("product-detail"));
 fetch("db.json")
@@ -45,11 +47,11 @@ fetch("db.json")
         let exist = basket.find((p) => p.id == data_id);
 
         if (exist) {
-          exist.count++;
+          exist.count+=initialCount;
         } else {
           basket.push({
             id: data_id,
-            count: 1,
+            count: initialCount,
             price: data_price,
           });
         }
@@ -62,21 +64,18 @@ fetch("db.json")
     document
       .querySelector(".detail-decrease-icon")
       .addEventListener("click", function () {
-        let clickedIcon = basket.find((i) => i.id == product.id);
-        if (clickedIcon.count != 1) {
-          clickedIcon.count--;
+        
+        if (initialCount > 1) {
+          initialCount--;
         }
-        document.querySelector(".detail-count").innerText = clickedIcon.count;
-        localStorage.setItem("basket", JSON.stringify(basket));
+        document.querySelector(".detail-count").innerText = initialCount;
       });
 
     document
       .querySelector(".detail-increase-icon")
       .addEventListener("click", function () {
-        let clickedIcon = basket.find((i) => i.id == product.id);
-        clickedIcon.count++;
-        document.querySelector(".detail-count").innerText = clickedIcon.count;
-        localStorage.setItem("basket", JSON.stringify(basket));
+        initialCount++;
+        document.querySelector(".detail-count").innerText = initialCount;
       });
   });
 
